@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" class="buttonmore" name="buttonPlus">Bouton de type "+"</button>
+  <button type="button" class="buttonless" name="buttonLess">Bouton de type "-""</button>
+  <p>Le nombre <span>est de 0</span></p>
+</body>
+<script>
+i = 0;
+$(".buttonless").click(function()
+{
+ i-=1;
+  $("span").text("est de " + i);
+})
+$(".buttonmore").click(function()
+{
+ i+=1;
+  $("span").text("est de " + i);
+})
+
+</script>
+
+</html>

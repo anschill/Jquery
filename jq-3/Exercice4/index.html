@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <script src="jquery-3.3.1.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" name="height" id="height">Height</button>
+  <button type="button" name="green" id="green">Green</button>
+  <button type="button" name="initial" id="initial">Initial</button>
+  <button type="button" name="hide" id="hide">Hide</button>
+  <button type="button" name="appear" id="appear">Appear</button>
+
+  <div class="carre"></div>
+
+
+  <script>
+
+  $(function()
+  {
+
+    $('div').css("background" , "purple");
+    $('div').width('90');
+    $('div').height('40');
+
+
+    $("#height").click(function()
+    {
+      $(".carre").toggle(function ()
+      {
+        $(this).animate({height: "200px"}, 300);
+      })
+  })
+
+
+
+
+  $('#green').click(function()
+  {
+    $('div').css("background" , "green");
+  })
+
+  $('#initial').click(function()
+  {
+    $('div').css("background" , "purple");
+  })
+
+  $('#hide').click(function()
+  {
+    $('div').hide();
+  })
+
+  $('#appear').click(function()
+  {
+    $('div').show();
+  })
+
+});
+//   });
+// });
+
+</script>
+
+
+</body>
+</html>
